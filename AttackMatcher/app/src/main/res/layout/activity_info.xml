@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1440"
+    android:orientation="horizontal"
+    android:background="#404040"
+    tools:context="com.gerpeace.attackmatcher.InfoActivity">
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="150">
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1140"
+        android:weightSum="2560"
+        android:orientation="vertical">
+        <!--top menu-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100">
+            <!--back-->
+            <TextView
+                android:onClick="backToMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <!---->
+            <!--money-->
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,000 G"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <!---->
+        </RelativeLayout>
+        <!---->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="150">
+            <!--Character Info-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Character Info"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <!---->
+        </RelativeLayout>
+        <!--Character Info Box-->
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="500">
+            <RelativeLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--Character Image-->
+                <ImageView
+                    android:id="@+id/pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cha1_s"/>
+                <!---->
+                <!--Character Name-->
+                <TextView
+                    android:id="@+id/cha_name"
+                    android:layout_toRightOf="@+id/pic"
+                    android:paddingLeft="10dp"
+                    android:text="Character Name"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!---->
+                <!--Character Detail-->
+                <TextView
+                    android:id="@+id/cha_detail"
+                    android:layout_toRightOf="@+id/pic"
+                    android:layout_below="@+id/cha_name"
+                    android:padding="10dp"
+                    android:text="bra bra bra bra bra bra bra bra bra bra bra bra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!---->
+            </RelativeLayout>
+        </LinearLayout>
+        <!---->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"></RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="150">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skill"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <!--GridView Show Skill-->
+        <RelativeLayout
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="800">
+            <GridView
+                android:id="@+id/gv_skill"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="4">
+            </GridView>
+        </RelativeLayout>
+        <!---->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"></RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="150">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skill Info and Upgrade"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="500">
+        <RelativeLayout
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="10dp">
+            <!--Skill Image-->
+            <ImageView
+                android:id="@+id/img_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/skill1"/>
+            <!---->
+            <!--Skill Name-->
+            <TextView
+                android:id="@+id/tv_skill_name"
+                android:layout_toRightOf="@+id/img_skill"
+                android:paddingLeft="10dp"
+                android:text="Character Name"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!---->
+            <!--Skill Detail-->
+            <TextView
+                android:id="@+id/tv_skill_detail"
+                android:layout_toRightOf="@+id/img_skill"
+                android:layout_below="@+id/tv_skill_name"
+                android:padding="10dp"
+                android:text="bra bra bra bra bra bra bra bra bra bra bra bra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!---->
+            <Button
+                android:onClick="OnUpgrade"
+                android:layout_below="@id/tv_skill_detail"
+                android:layout_alignLeft="@+id/tv_skill_detail"
+                android:id="@+id/upgrade_btn"
+                android:text="Upgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"></RelativeLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="150">
+    </FrameLayout>
+</LinearLayout>

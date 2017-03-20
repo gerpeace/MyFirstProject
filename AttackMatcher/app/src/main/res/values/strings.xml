@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Attack Matcher</string>
+    <string name="regis_url">http://attackmatcher.esy.es/am_register.php</string>
+    <string name="login_url">http://attackmatcher.esy.es/am_login.php</string>
+</resources>
